@@ -1,33 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:alumni_connect/screens/Mentorship.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: Home(),
-  ));
+  runApp(MyApp());
 }
 
-class Home extends StatelessWidget {
-  const Home({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(10.0, 20.0, 25.0, 10),
-        child: Column(children: <Widget>[
-          Text("Hello"),
-          Text("This is Column 1"),
-          Row(
-            children: <Widget>[
-              Text("Row 3"),
-              Text("data3"),
-              CircleAvatar(
-                radius: 50,
-              )
-            ],
-          )
-        ]),
-      ),
+    return MaterialApp(
+      home: Mentorship(),
+      themeMode: ThemeMode.dark,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      darkTheme:
+          ThemeData(brightness: Brightness.dark, primarySwatch: Colors.cyan),
     );
   }
 }
